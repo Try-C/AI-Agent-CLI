@@ -1,0 +1,31 @@
+# Local secrets
+.env
+.paicli/
+
+# Build output
+target/
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local documentation, demos, and helper files excluded from the source snapshot
+/AGENTS.md
+/CLAUDE.md
+/README.md
+/ROADMAP.md
+/demo/
+/docs/
+/img/
+/check_path.py
+/list_target.bat
+/list_target.ps1
