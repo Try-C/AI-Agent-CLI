@@ -21,7 +21,6 @@ Thumbs.db
 # Local documentation, demos, and helper files excluded from the source snapshot
 /AGENTS.md
 /CLAUDE.md
-/README.md
 /ROADMAP.md
 /demo/
 /docs/
