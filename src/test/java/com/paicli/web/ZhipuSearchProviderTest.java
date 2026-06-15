@@ -69,7 +69,7 @@ class ZhipuSearchProviderTest {
                               "publish_date": "2026-01-01"
                             },
                             {
-                              "title": "PaiCLI 教程",
+                              "title": "AI Agent CLI 教程",
                               "link": "https://example.com/article/paicli",
                               "content": "从零打造 Java Agent CLI"
                             }

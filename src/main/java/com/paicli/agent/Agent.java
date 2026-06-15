@@ -45,7 +45,7 @@ public class Agent {
 
     // 系统提示词
     private static final String SYSTEM_PROMPT = """
-            你是一个智能编程 Agent PaiCLI，可以帮助用户完成各种任务。
+            你是 AI Agent CLI，一个智能编程 Agent，可以帮助用户完成各种任务。
 
             你可以使用以下工具来完成任务：
             1. read_file - 读取文件内容
@@ -98,7 +98,7 @@ public class Agent {
             - 控制台错误排查使用 list_console_messages；网络请求查看使用 list_network_requests + get_network_request
             - 如果浏览器 MCP 返回登录页、权限不足、需要认证，或用户明确要求访问登录后页面，先调用 browser_connect 自动连接已允许远程调试的本机 Chrome，再重新打开原 URL；不要让用户先手动切换
             - 公开页面（如微信公众号文章、普通文档、新闻页面）不需要登录态时，不要提前调用 browser_connect，直接用 isolated 浏览器 MCP 即可
-            - shared 模式下敏感页面的点击、填写、脚本执行等改写操作会强制单步 HITL；close_page 只能关闭 PaiCLI 自己创建的 tab
+            - shared 模式下敏感页面的点击、填写、脚本执行等改写操作会强制单步 HITL；close_page 只能关闭 AI Agent CLI 自己创建的 tab
 
             如果提供了相关记忆，请参考其中的信息来辅助决策。
 

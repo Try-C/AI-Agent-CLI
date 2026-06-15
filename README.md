@@ -1,6 +1,6 @@
-# PaiCLI
+# AI Agent CLI
 
-PaiCLI 是一个使用 Java 17 构建的本地 Agent 命令行工具。它以 ReAct 循环为默认执行方式，并提供计划执行、多 Agent 协作、长期记忆、代码检索、人工审批、MCP 扩展、浏览器操作和 Skill 系统。
+AI Agent CLI 是一个使用 Java 17 构建的本地 Agent 命令行工具。它以 ReAct 循环为默认执行方式，并提供计划执行、多 Agent 协作、长期记忆、代码检索、人工审批、MCP 扩展、浏览器操作和 Skill 系统。
 
 当前 CLI 版本：`v15.0.0`
 
@@ -130,7 +130,7 @@ SEARCH_PROVIDER=zhipu
 
 ## MCP 配置
 
-PaiCLI 按以下顺序加载 MCP 配置：
+AI Agent CLI 按以下顺序加载 MCP 配置：
 
 1. 用户级：`~/.paicli/mcp.json`
 2. 项目级：`.paicli/mcp.json`
@@ -155,6 +155,10 @@ Skill 按以下优先级加载，后加载的同名 Skill 会覆盖前者：
 1. Jar 内置：`src/main/resources/skills/`
 2. 用户级：`~/.paicli/skills/<name>/SKILL.md`
 3. 项目级：`.paicli/skills/<name>/SKILL.md`
+
+## 兼容性标识
+
+项目对外名称为 **AI Agent CLI**。为兼容现有代码与本地数据，Java 包名 `com.paicli`、配置目录 `.paicli`、环境变量前缀 `PAICLI_` 和当前 Jar 名 `paicli-1.0-SNAPSHOT.jar` 暂时保留。
 
 ## 安全说明
 

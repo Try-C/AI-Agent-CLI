@@ -1,6 +1,6 @@
 # Chrome DevTools MCP / CDP 速查
 
-PaiCLI 第 13 期接入 Google 官方 `chrome-devtools-mcp@latest`（28 个工具），第 14 期加 `/browser connect` 切 shared 模式。
+AI Agent CLI 接入 Google 官方 `chrome-devtools-mcp@latest`，并支持通过 `/browser connect` 切换 shared 模式。
 
 ## 模式切换
 
@@ -35,9 +35,9 @@ google-chrome --remote-debugging-port=9222
 
 ### 导航（6）
 - `navigate_page` — 在已开 tab 中跳转新 URL
-- `new_page` — 开新 tab（PaiCLI 记录为 agent-opened，可被 close_page 关）
+- `new_page` — 开新 tab（AI Agent CLI 记录为 agent-opened，可被 close_page 关）
 - `select_page` — 切换激活 tab
-- `close_page` — 关 tab（**只能关 PaiCLI 自己 new_page 出来的**）
+- `close_page` — 关 tab（**只能关 AI Agent CLI 自己 new_page 出来的**）
 - `list_pages` — 列出所有 tab
 - `wait_for` — 等待选择器或文本出现（最常用：等 SPA 关键容器加载）
 
@@ -105,7 +105,7 @@ navigate_page(url)
 
 ## 常见陷阱
 
-1. **截图无意义**：`take_screenshot` 的 image content LLM 看不到，PaiCLI 现版本不直传给模型。一定要看页面布局时用，并且自己向用户描述。
+1. **截图无意义**：`take_screenshot` 的 image content LLM 看不到，AI Agent CLI 现版本不直传给模型。一定要看页面布局时用，并且自己向用户描述。
 2. **selector 经常失效**：SPA 站点 class 名是 hash 化的（`._3f9k_aBcD2`），优先用 snapshot 拿 uid，再 click(uid) / fill(uid)。
 3. **wait_for 比 sleep 可靠**：等异步加载用 `wait_for`，不要用 `setTimeout` / `sleep`。
 4. **跨 tab 操作**：`new_page` 后默认不切换激活 tab，需要 `select_page` 或在 navigate 时显式指定 pageId。

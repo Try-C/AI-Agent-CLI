@@ -10,8 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>PaiCLI</name>
-    <description>A simple Java Agent CLI like Claude Code</description>
+    <name>AI Agent CLI</name>
+    <description>A Java-based autonomous agent command-line application</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

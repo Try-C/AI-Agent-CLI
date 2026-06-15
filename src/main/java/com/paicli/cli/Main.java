@@ -56,7 +56,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 /**
- * PaiCLI v15.0.0 - Skill-Driven Agent CLI
+ * AI Agent CLI v15.0.0 - Skill-Driven Agent CLI
  * 支持 ReAct、Plan-and-Execute、Memory、RAG、Multi-Agent、HITL、并行工具调用、多模型切换、MCP、CDP 会话复用
  * 第 15 期新增：Skill 系统（三层加载 + load_skill 工具 + SkillContextBuffer 注入）、内置 web-access skill
  * HITL 增强：路径围栏（PathGuard）、命令快速拒绝（CommandGuard）、操作审计链（AuditLog）—— 见 com.paicli.policy
@@ -578,7 +578,7 @@ public class Main {
             return thread;
         });
         Future<String> future = executor.submit(task);
-        // 进入 raw mode 监听 ESC：raw mode 关 ICANON / ECHO / IEXTEN 但保留 ISIG，所以 Ctrl+C 仍能终止 PaiCLI。
+        // 进入 raw mode 监听 ESC：raw mode 关 ICANON / ECHO / IEXTEN 但保留 ISIG，所以 Ctrl+C 仍能终止程序。
         Attributes original = null;
         boolean hintPrinted = false;
         try {
@@ -955,8 +955,8 @@ public class Main {
                 new SlashCommandHint("/skill on ", "/skill on <name>", "启用 skill"),
                 new SlashCommandHint("/skill off ", "/skill off <name>", "禁用 skill"),
                 new SlashCommandHint("/skill reload", "/skill reload", "重新扫描 skill 目录"),
-                new SlashCommandHint("/exit", "/exit", "退出 PaiCLI"),
-                new SlashCommandHint("/quit", "/quit", "退出 PaiCLI")
+                new SlashCommandHint("/exit", "/exit", "退出 AI Agent CLI"),
+                new SlashCommandHint("/quit", "/quit", "退出 AI Agent CLI")
         );
     }
 
@@ -1381,12 +1381,7 @@ public class Main {
     private static void printBanner() {
         System.out.println("╔══════════════════════════════════════════════════════════╗");
         System.out.println("║                                                          ║");
-        System.out.println("║   ██████╗  █████╗ ██╗ ██████╗██╗     ██╗                ║");
-        System.out.println("║   ██╔══██╗██╔══██╗██║██╔════╝██║     ██║                ║");
-        System.out.println("║   ██████╔╝███████║██║██║     ██║     ██║                ║");
-        System.out.println("║   ██╔═══╝ ██╔══██║██║██║     ██║     ██║                ║");
-        System.out.println("║   ██║     ██║  ██║██║╚██████╗███████╗██║                ║");
-        System.out.println("║   ╚═╝     ╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝╚═╝                ║");
+        System.out.println("║                     AI AGENT CLI                         ║");
         System.out.println("║                                                          ║");
         System.out.printf("║      Skill-Driven Agent CLI %-26s║%n", "v" + VERSION);
         System.out.println("║                                                          ║");
